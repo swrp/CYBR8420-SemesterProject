@@ -19,7 +19,34 @@ There have been relatively few security issues in the Elasticsearch software its
 | 2017 | 0             | 8      | Medium          |
 | 2018 | 2             | 1      | High            |
 
-### Security Needs
+
+### User Security Needs
+   
+   User authentication to protect data flow from unauthorized users and modifications.
+    
+   Data Integrity to prevent accidental data loss, corruption and unintentional modifications.
+
+  **Identity Access Management** to Manage user activities on Elastic search cluster.
+    
+   Fine grained user privileges and attribute based access controls to prevent unauthorized access to Elastic search cluster.
+      
+   Access control's on stored data procedures. 
+      
+      For ex: If a client finds a bug in the application that gives access to elasticsearch 
+      this gives them access to data in all indexes and grab data that belongs to other clients.
+      (This can be eliminated with the use of a commercial plugin called SHIELD). 
+      As a user I except this to be a part of elasticsearch.
+       
+   **Data Encryption** to protect user data (credit card information, email addresses, passwords) as it travels with in the clusters. 
+
+   Secure (TLS/SSL) certificates to establish trust between cluster's. 
+
+   Audit log for all unauthorized login attempts, nefarious network traffic trying to enter the cluster, detect false connections with no signatures.   
+
+   Making sure that clusters are hidden with deep private networks and only accessible to required applications. 
+   Manually disable features that are not used by the application(eg: default ports).
+
+
 
 ### Security Features
 
