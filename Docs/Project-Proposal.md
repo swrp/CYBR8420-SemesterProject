@@ -19,7 +19,6 @@ There have been relatively few security issues in the Elasticsearch software its
 | 2017 | 0             | 8      | Medium          |
 | 2018 | 2             | 1      | High            |
 
-### Security Needs
 
 ### User Security Needs
    
@@ -33,8 +32,10 @@ There have been relatively few security issues in the Elasticsearch software its
       
    Access control's on stored data procedures. 
       
-      For ex: If a client finds a bug in the application that gives access to elasticsearch this gives them access to data in all indexes and grab data that belongs to other clients.
-      (This can be eliminated with the use of a commercial plugin called SHIELD). As a user I except this to be a part of elasticsearch.
+      For ex: If a client finds a bug in the application that gives access to elasticsearch 
+      this gives them access to data in all indexes and grab data that belongs to other clients.
+      (This can be eliminated with the use of a commercial plugin called SHIELD). 
+      As a user I except this to be a part of elasticsearch.
        
    **Data Encryption** to protect user data (credit card information, email addresses, passwords) as it travels with in the clusters. 
 
