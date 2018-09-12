@@ -64,6 +64,7 @@ Node/Client Authentication & Channel Encryption: Encryption of data transmitted 
 Auditing: Logs almost all activities that take place in the system so as to assist analysis in case of anomalies.
 ### Motivations
 
+Elastic search is widely adopted in various industries like Netflix, Stack Overflow, LinkedIn, Accenture and Tripwire, amongst others. It has immense capabilities made possible due to the fact that it has a distributed architecture. It is interesting to dig into the possibility of security improvements of a search engine that has the scalability of thousands of servers and dealing with petabytes of data. Also, Elastic search is mostly based on Java, which all the team members are comfortable with.
 ### Project Links
 * Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
 * Project Board: https://github.com/swrp/CYBR8420-SemesterProject/projects
