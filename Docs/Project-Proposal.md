@@ -62,8 +62,6 @@ Authorization: This refers to the process of identifying whether the requesting 
 Node/Client Authentication & Channel Encryption: Encryption of data transmitted over the wire and certificate-based node authentication. This is achieved by configuring IP filters.
 
 Auditing: Logs almost all activities that take place in the system so as to assist analysis in case of anomalies.
-
-
 ### Motivations
 
 ### Project Links
