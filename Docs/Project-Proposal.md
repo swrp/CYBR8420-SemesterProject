@@ -3,6 +3,7 @@
 ### Description
 
 ### License
+The core features in Elasticsearch are open source under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html), which is a permissive license from the Apache Software Foundation.  Elastic also provides paid features, through their X-Pack subscriptions.  The X-Pack features are also in the Elasticsearch GitHub repository, however these are published under the [Elastic License](https://github.com/elastic/elasticsearch/blob/0d8aa7527e242fbda9d84867ab8bc955758eebce/licenses/ELASTIC-LICENSE.txt).  So while the X-Pack code is open, it is not truly open source because of the license.
 
 ### Contributions
 
