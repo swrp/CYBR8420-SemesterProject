@@ -1,5 +1,5 @@
 ## Project Proposal - Elasticsearch
-Elasticsearch is a real-time distributed and analytics search engine. The best part of this product is it is an open source so anyone can download without paying any licensing cost so it comes under the open source license and it is developed in the Java platform and it is based on the leucine engine on top of which we have restful interfaces so whatever the search base engine work behind the scenes on top of which we have the restful API so that helps in fulfilling the request and responding to the request so it supports full text search completely document based instead of tables and ski masks so there are some more face engines which are available in the market but those are based on the tables and schema based the best part about this product is this is all based on the documents instead of schemas and it is used for the single page application projects. The Elasticsearch REST APIs are accessed using JSON over HTTP.
+Elasticsearch is a enterprise level distributed RESTful search engine based on leucine. It is open source, highly scalable and provides very fast near real time searches. Ealstic search can be used to search all types of documents. It is developed in  Java and comes with a powerful REST API interface. The Elasticsearch REST APIs are accessed using JSON over HTTP. Elaticsearch supports wide variety of languages.
 
 **The basic concepts of the Elasticsearch are:**
 
@@ -17,26 +17,28 @@ Elasticsearch is a real-time distributed and analytics search engine. The best p
 
 **Replicas:** “Elasticsearch allows you to make one or more copies of your index’s shards which are called replica shard or replica.”
 
-The benefits of Elasticsearch is in terms of query is it lets you perform and combine many different type of searches like structures as well as the unstructured searches it also helps in working upon the data which is based on geography and which is also based on metrics so irrespective  of what type of data you have whether it is structured or unstructured geo based or it’s a metric base elastic search all supports that and the best part about this is you can retrieve the result from the data which you import in any way you like so it is all based on the some structured query. Elasticsearch helps in analyzing the billions of log lines easily and provides aggregations which help you zoom out to explore trends and patterns in your data like shows files where place is Chicago, aggregates data by days, aggregates data by geography and other different patterns. 
-The main advantages of Elasticsearch are scalability, Really fast, Multilingual, document oriented, autocompletion & instant search, schema free. 
+The benefits of Elasticsearch in terms of query is it will let you to combine and perform many different types of searches like structured as well as the unstructured searches. It also helps in working upon the data which is based on geography and on metrics so irrespective of what type of data you have been used it will perform effectively and fastly. Elasticsearch helps in analyzing the billions of log lines easily and provides aggregations which help you zoom out to explore trends and patterns in your data like show files where place is Chicago, aggregates data by days, aggregates data by geography and other different patterns. 
+
+The main advantages of Elasticsearch are scalability, fast, multilingual, document oriented, autocompletion & instant search, schema free. 
+
 
 ### Contributors
 
-Since it is an open source software anyone can fork or clone their project from the GitHub through the link https://github.com/elastic/elasticsearch then make changes and run tests. Push and create pull request to the Elasticsearch. Then discuss the changes that you worked on with the elastic member. They will test the changes and if appropriate they will merge it to the master branch.
+Since it is an open source software anyone can contribute to the project in the [elasticsearch GitHub](https://github.com/elastic/elasticsearch) page. The contributors must follow the [contribution instructions] (https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md) mentioned in their project open source page.
 
-Below graph shows the contributors of Elasticsearch since 2010 to till month from the GitHub open source repository. We can see the improvement in the number of contributors every year. 
+From the below graph we can analyze the number of people contributing to the elasticsearch since 2010 to till month. This statistics are  from the elasticsearch GitHub open source repository. From the graph we can observe the increase in the number of contributors for this repository every year.
 
 ![Contributions in GitHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Contributor%20GitHub.png)
 
-Below contributors per month statistics are collected from the other opensource repository https://www.openhub.net/p/elasticsearch
+Below statistics are based on the another elasticsearch open source reposiroty [elasticsearch openhub source page](https://www.openhub.net/p/elasticsearch) 
 
 ![Contributions in OpenHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/OpenHub%20Contributor.png)
 
 ### Activity
 
-Since it is founded, Elasticsearch has skyrocketed every year and is now currently one of the leading providers. 
-This project has nearly 50,000 commits by around 2,000 contributors and over a 2.5 million lines of code in the opensource https://github.com/elastic/elasticsearch. 
-The below statistics are according to the another opensource site of Elasticsearch https://www.openhub.net/p/elasticsearch 
+Since the time it is developed, Elasticsearch has skyrocketed every year and is now currently one of the leading providers. 
+This project has nearly 50,000 commits by around 2,000 contributors and over a 2.5 million lines of code. These statistics are analyzed from the [elasticsearch GitHub page](https://github.com/elastic/elasticsearch). 
+The below statistics are according to the another opensource repository of Elasticsearch [elasticsearch openhub source page] (https://www.openhub.net/p/elasticsearch) 
 
 ![Activity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Activity.png)
 
@@ -47,12 +49,11 @@ There are various number of organizations that are using Elasticsearch products 
 
 ### Popularity
 
-We can see the increase in trend of Elasticsearch from year to year and regionally since the time it is founded.
-This popularity and trend keeps on increasing worldwide because of it is an open source, it has powerful api, it searches everything, fast search, easy to scale, restful service, great search engine features and many more features are keeping Elasticsearch one of the top competitors.
+We can see the increase in the popularity of Elasticsearch from year to year since the time it is developed. Since it is an open source free, this product popularity has been increased worldwide.The benefits like powerful api, it searches everything, fast search, easy to scale, restful service, many great search engine features and many other features are keeping Elasticsearch one of the top competitors.
+
+From the below statistics, we can observe the popularity of elasticsearch year by year and regionally.
 
 ![Popularity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity.png)
-
-Regionally, Elasticsearch popularity also increased worldwide which is shown in the below image. 
 
 ![Popularity of Elasticsearch regionally](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity%202.png)
 
@@ -64,23 +65,23 @@ The language used to develop the Elasticsearch is Java. It is an open source und
 
 ### Platform used:
 
-To run Elasticsearch it requires at least Java version of 1.8.0_131 or later version in the Java 8 release series. It supports only Oracle’s Java and the OpenJDK. It is recommended to use same JVM version across all the Elasticsearch nodes and clients. They also tested running Elasticsearch on the various platforms that are listed in their website but is also possible that it can work on other platforms that are not listed in their website.
+Elasticsearch requires at least Java version of 1.8.0_131 or later version in the Java 8 release series to run their project. It supports only Oracle’s Java and the OpenJDK. It is recommended to use same JVM version across all the Elasticsearch nodes and clients. They also tested running Elasticsearch successfully on the various platforms that are listed in their website. They also mentioned that it is also possible that it can work on other platforms that are not listed in their website.
 
-Matrix supported (Platforms): https://www.elastic.co/support/matrix
+[List of platforms page](https://www.elastic.co/support/matrix) consists of list of platforms that supports elastcsearch.
 
 ### Documentation Sources
 
-The detailed concepts and information about Elasticsearch is provided in the page https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html which also includes the basic concepts of Elasticsearch, installation guide, set up Elasticsearch and other detailed information about Elasticsearch.
+The main features and other detailed information including the guidelines for installing Elasticsearch are explained in the [Elasticsearch documentation page](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html).
+The [lectures about the features of the Elasticsearch] (https://www.elastic.co/videos) page consists of all the videos about the products of the elastic.
 
-The https://www.elastic.co/videos page consists of all the videos about the products of the elastic.
 
 ### License
 
-Elasticsearch releases all their projects under the Apache 2.0 License. All code is checked into GitHub and is open source, meaning any one can contribute to the source code whether they are features, bug reports, documentation improvement or patches to existing projects.
+The core features in Elasticsearch are open source under the Apache 2.0 License, which is a permissive license from the Apache Software Foundation. Elastic also provides paid features, through their X-Pack subscriptions. The X-Pack features are also in the Elasticsearch GitHub repository, however these are published under the Elastic License. So, while the X-Pack code is open, it is not truly open source because of the license.
 
 ### Procedure for making contributions
 
-Elasticsearch is an open source project and so anyone can contribute their project through the GitHub source. Anyone can fork or clone their project from the GitHub through the link https://github.com/elastic/elasticsearch then make changes and run tests in their local machine. Push and create pull request to the Elasticsearch. Then discuss the changes that you worked on with the elastic member. They will test the changes and if appropriate they will merge it to the master branch.
+Elasticsearch is an open source project and so anyone can contribute their project through the GitHub source. Anyone can fork or clone their project from the GitHub through the [elasticsearch GitHub page](https://github.com/elastic/elasticsearch). Then they can make changes or add their new feature code to the project and run tests in the local machine. After testing fully, you can push and create pull request to the Elasticsearch. Then discuss the changes that you worked on with the elastic member. They will test the changes and if appropriate they will merge it to their master branch.
 
 ### Contributor 
 
