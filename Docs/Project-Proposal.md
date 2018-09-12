@@ -21,9 +21,7 @@ There have been relatively few security issues in the Elasticsearch software its
 
 ### Security Needs
 
-# Project Proposal
-
-## User Security Needs
+### User Security Needs
    
    User authentication to protect data flow from unauthorized users and modifications.
     
