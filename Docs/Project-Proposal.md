@@ -45,7 +45,7 @@ The below statistics are according to the another opensource site of Elasticsear
 ### USE
 There are various number of organizations that are using Elasticsearch products are eBay, vimeo, Fermi lab, Air bus, SAP concur, Lyft, IEEE Global spec, Citi bank, fit bit, Cox communications, GoDaddy, Fastenal, Microsoft, Volkswagen, Accenture,  Sprint, Blizzard, Dell, Symantec, Verizon, Netflix, Facebook, Warner Brothers, Walmart, Slack, BBC, Cisco, Fandango, Uber, Blackboard, Cybersecurity Innovations, Microsoft and many more are using Elasticsearch use cases efficiently.
 
-###Popularity
+### Popularity
 
 We can see the increase in trend of Elasticsearch from year to year and regionally since the time it is founded.
 This popularity and trend keeps on increasing worldwide because of it is an open source, it has powerful api, it searches everything, fast search, easy to scale, restful service, great search engine features and many more features are keeping Elasticsearch one of the top competitors.
