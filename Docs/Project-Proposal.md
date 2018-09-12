@@ -26,11 +26,11 @@ Since it is an open source software anyone can fork or clone their project from 
 
 Below graph shows the contributors of Elasticsearch since 2010 to till month from the GitHub open source repository. We can see the improvement in the number of contributors every year. 
 
-[Contributions in GitHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Contributor%20GitHub.png)
+![Contributions in GitHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Contributor%20GitHub.png)
 
 Below contributors per month statistics are collected from the other opensource repository https://www.openhub.net/p/elasticsearch
 
-[Contributions in OpenHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/OpenHub%20Contributor.png)
+![Contributions in OpenHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/OpenHub%20Contributor.png)
 
 ### Activity
 
@@ -38,9 +38,9 @@ Since it is founded, Elasticsearch has skyrocketed every year and is now current
 This project has nearly 50,000 commits by around 2,000 contributors and over a 2.5 million lines of code in the opensource https://github.com/elastic/elasticsearch. 
 The below statistics are according to the another opensource site of Elasticsearch https://www.openhub.net/p/elasticsearch 
 
-[Activity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Activity.png)
+![Activity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Activity.png)
 
-[Lines of Code](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Lines%20of%20code.png)
+![Lines of Code](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Lines%20of%20code.png)
 
 ### USE
 There are various number of organizations that are using Elasticsearch products are eBay, vimeo, Fermi lab, Air bus, SAP concur, Lyft, IEEE Global spec, Citi bank, fit bit, Cox communications, GoDaddy, Fastenal, Microsoft, Volkswagen, Accenture,  Sprint, Blizzard, Dell, Symantec, Verizon, Netflix, Facebook, Warner Brothers, Walmart, Slack, BBC, Cisco, Fandango, Uber, Blackboard, Cybersecurity Innovations, Microsoft and many more are using Elasticsearch use cases efficiently.
@@ -50,17 +50,17 @@ There are various number of organizations that are using Elasticsearch products 
 We can see the increase in trend of Elasticsearch from year to year and regionally since the time it is founded.
 This popularity and trend keeps on increasing worldwide because of it is an open source, it has powerful api, it searches everything, fast search, easy to scale, restful service, great search engine features and many more features are keeping Elasticsearch one of the top competitors.
 
-[Popularity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity.png)
+![Popularity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity.png)
 
 Regionally, Elasticsearch popularity also increased worldwide which is shown in the below image. 
 
-[Popularity of Elasticsearch regionally](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity%202.png)
+![Popularity of Elasticsearch regionally](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity%202.png)
 
 ### Languages Used
 
 The language used to develop the Elasticsearch is Java. It is an open source under the terms and conditions of the Apache License. There are many clients available who consume Elasticsearch. The main official clients who use Elasticsearch are Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and other many languages. 
 
-[Laguages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Languages%20used.png)
+![Laguages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Languages%20used.png)
 
 ### Platform used:
 
