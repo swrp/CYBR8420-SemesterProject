@@ -53,11 +53,11 @@ Since elastic search is made up of many moving parts, it has various layers of s
 User Authentication: Authentication services called realms, provided built in by X-pack, handles the process. There are some built in realms like native, ldap, active_directory, pki, file, saml. Also, one can built their own realm, which can then be plugged into X-pack.
 
 Authorization: This refers to the process of identifying whether the requesting user is allowed to execute the request. It involves 5 sub-parts:
-•	Secured resources
-•	Privilege
-•	Permissions- set of privileges
-•	Role- named set of permission
-•	User 
+*	Secured resources
+*	Privilege
+*	Permissions- set of privileges
+*	Role- named set of permission
+*	User 
 
 Node/Client Authentication & Channel Encryption: Encryption of data transmitted over the wire and certificate-based node authentication. This is achieved by configuring IP filters.
 
