@@ -48,8 +48,24 @@ There have been relatively few security issues in the Elasticsearch software its
    Manually disable features that are not used by the application(eg: default ports).
 
 ### Security Features
+Since Elasticsearch is made up of many moving parts, it has various layers of security. X-pack security is the security provider that works on elastic search on various levels. Following is a further description of the levels:
+
+User Authentication: Authentication services called realms, provided built in by X-pack, handles the process. There are some built in realms like native, ldap, active_directory, pki, file, saml. Also, one can built their own realm, which can then be plugged into X-pack.
+
+Authorization: This refers to the process of identifying whether the requesting user is allowed to execute the request. It involves 5 sub-parts:
+*	Secured resources
+*	Privilege
+*	Permissions- set of privileges
+*	Role- named set of permission
+*	User 
+
+Node/Client Authentication & Channel Encryption: Encryption of data transmitted over the wire and certificate-based node authentication. This is achieved by configuring IP filters.
+
+Auditing: Logs almost all activities that take place in the system so as to assist analysis in case of anomalies.
+
 
 ### Motivations
+Elasticsearch is widely adopted in various industries like Netflix, Stack Overflow, LinkedIn, Accenture and Tripwire, amongst others. It has immense capabilities made possible due to the fact that it has a distributed architecture. It is interesting to dig into the possibility of security improvements of a search engine that has the scalability of thousands of servers and dealing with petabytes of data. Also, Elasticsearch is mostly built on Java, which all the team members are comfortable with.
 
 ### Project Links
 * Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
