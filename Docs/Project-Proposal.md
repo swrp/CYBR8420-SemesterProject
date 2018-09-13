@@ -55,11 +55,11 @@ User Authentication: Authentication services called realms, provided built in by
 Authorization: This refers to the process of identifying whether the requesting user is allowed to execute the request. It involves 5 sub-parts:
 *	Secured resources
 *	Privilege
-*	Permissions- set of privileges
-*	Role- named set of permission
+*	Permissions (set of privileges)
+*	Role (named set of permission)
 *	User 
 
-Node/Client Authentication & Channel Encryption: Encryption of data transmitted over the wire and certificate-based node authentication. This is achieved by configuring IP filters.
+Node/Client Authentication & Channel Encryption: Encryption of data transmitted over the wire and certificate-based node authentication. This can be enhanced by configuring IP filters.
 
 Auditing: Logs almost all activities that take place in the system so as to assist analysis in case of anomalies.
 
