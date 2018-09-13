@@ -24,26 +24,46 @@ There have been relatively few security issues in the Elasticsearch software its
 ### User Security Needs
    
    User authentication to protect data flow from unauthorized users and modifications.
-    
+   
    Data Integrity to prevent accidental data loss, corruption and unintentional modifications.
 
+    
+    Scenario:  Being a responsible project manager I would like to use elasticsearch for my 
+    company. Our projects are driven by agile process and I want to integrate elasticsearch 
+    with my ticket tracking tool to monitor the progress on project for each sprint.
+    But I want authenticated users from my organization to view this progress and restric them 
+    from atlering any data in the cluster.  
+    
+   
   **Identity Access Management** to Manage user activities on Elastic search cluster.
     
    Fine grained user privileges and attribute based access controls to prevent unauthorized access to Elastic search cluster.
-      
+   
+    Scenario: As an IT Developer I use elasctisearch on my version control to monitor the number 
+    of commits by each developer for every project. All the developers can view their progress but 
+    I would like to limit it to read permissions and restrict them from making any modifications 
+    to the cluster. 
+    
    Access control's on stored data procedures. 
       
       For ex: If a client finds a bug in the application that gives access to elasticsearch 
       this gives them access to data in all indexes and grab data that belongs to other clients.
-      (This can be eliminated with the use of a commercial plugin called SHIELD). 
+      (This can be eliminated with the use of a commercial plugin called X-Pack Security). 
       As a user I except this to be a part of elasticsearch.
        
    **Data Encryption** to protect user data (credit card information, email addresses, passwords) as it travels with in the clusters. 
 
    Secure (TLS/SSL) certificates to establish trust between cluster's. 
-
+    
+    Scenario: I would like to monitor all the incoming IP requests to my home network and expect 
+    elasticsearch to securely encrypt my personal data, share my data to users I have given access.
+        
    Audit log for all unauthorized login attempts, nefarious network traffic trying to enter the cluster, detect false connections with no signatures.   
 
+    Scenario: As a stackholder of an ecommerce organization I expect an audit log to be able 
+    to detect brute forced login attempts, uauthorized netwrok access, denial of service attacks
+    and connections from unapproved clients to my elasticsearch cluster. 
+   
    Making sure that clusters are hidden with deep private networks and only accessible to required applications. 
    Manually disable features that are not used by the application(eg: default ports).
 
