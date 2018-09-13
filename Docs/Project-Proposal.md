@@ -40,7 +40,7 @@ From the below statistics, we can observe the popularity of Elasticsearch year b
 ### Languages Used
 The language used to develop the Elasticsearch is Java.  There are many clients available that can connect to Elasticsearch. The official clients for Elasticsearch are Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and other many languages. 
 
-[Languages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Languages%20used.png)
+![Languages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Languages%20used.png)
 
 ### Platform Used
 Elasticsearch requires at least Java version 1.8.0_131 or a later version in the Java 8 release series to run their project. It supports only Oracle’s Java and the OpenJDK. It is recommended to use same JVM version across all the Elasticsearch nodes and clients. They also tested running Elasticsearch successfully on the various platforms that are listed in their website. They also mentioned that it is also possible that it can work on other platforms that are not listed in their website.
@@ -130,7 +130,7 @@ _Authorization_: This refers to the process of identifying whether the requestin
 *	Role (named set of permission)
 *	User 
 
-_Node/Client Authentication & Channel Encryption_: Encryption of data transmitted over the wire and certificate-based node authentication. This is achieved by configuring IP filters.
+_Node/Client Authentication & Channel Encryption_: Encryption of data transmitted over the wire and certificate-based node authentication. This can be enhanced by configuring IP filters.
 
 _Auditing_: Logs almost all activities that take place in the system so as to assist analysis in case of anomalies.
 
