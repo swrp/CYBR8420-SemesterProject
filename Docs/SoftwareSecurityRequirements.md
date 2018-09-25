@@ -6,9 +6,10 @@ To better define realistic security requirements for Elasticsearch the following
 
 ##### Environment 
 * Fraud Monitoring Department at a bank or credit card company using Elasticsearch to store customer information, threat data, and transaction information
+* The system is critical to the organization's ability to prevent credit card fraud and protect their cardholders
 ##### Data Flows
-The following Elasticsearch data flows....
-1. User storing data into elastic search - *Example: Fraud Analyst types notes from customer interaction*
+The following Elasticsearch data flows were used during the definition of use cases:
+1. User storing data into elastic search - *Example: Fraud Analyst types notes from customer interaction which are then stored in Elasticsearch*
 2. System pushes data into cluster - *Example: Credit Card transaction data pushed in Elasticsearch from other systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
 4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
@@ -29,7 +30,15 @@ Task 1 - Description, link to misuse case, list security requirements, reflectio
 Task 2 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
 
 ##### Internal Cluster Communication
-Elasticsearch is often deployed as a multi-node cluster in larger environments to provide data redundancy and increased performance.  There are a variety of protocols that make up the data flow between systems to accomplish smooth, scalable operations of the software.
+Elasticsearch is often deployed as a multi-node cluster in larger environments to provide data redundancy and increased performance.  There are a variety of protocols that make up the data flow between systems to accomplish smooth, scalable operations of the software.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Misuse%20Cases/Misuse%20Case_Elasticsearch_Cluster%20Communication_medium.png) for this data flow highlights attacks that might target cluster use cases such as data replication, fault detection, and joining a node to the cluster.  
+
+Security Requirements
+* Authenticate all new nodes that request to join the cluster to verify authorization
+* Data being transmitted between nodes should be encrypted to ensure confidentiality
+* Cluster communication should have the ability to operate on a separate network socket or interface so that it can be segmented from data collection and user traffic
+
+Elasticsearch does seem to include features in this area, although these security features are in the X-Pack paid modules.  Encrypting cluster communication and authenticating nodes systems can be done by [configuring TLS and deploying certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#tls-transport) to each node.  Elasticsearch also implements a feature called TCP Transport Profiles that allow cluster traffic between nodes to be[ segmented from other data flows](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/separating-node-client-traffic.html) by designating specific ports or even interfaces for cluster communication.
+
 
 ##### User Searches for Data
 Task 4 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
