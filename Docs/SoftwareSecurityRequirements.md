@@ -2,18 +2,19 @@
 
 
 ### Overview
-To better define realistic security requirements for Elasticsearch the following environment, data flows, and threat actors were used as the foundation for requirements engineering.  Uses cases and misuse cases were the developed for each data flow.
+To better define realistic security requirements for Elasticsearch the following environment, data flows, and threat actors were used as the foundation for requirements engineering.  Uses cases and misuse cases were then developed for each data flow to help define security requirements.  Finally, Elasticsearch documentation was reviewed for alignment of the identified security requirements, security configuration, and installation issues.
 
 ##### Environment 
 * Fraud Monitoring Department at a bank or credit card company using Elasticsearch to store customer information, threat data, and transaction information
 * The system is critical to the organization's ability to prevent credit card fraud and protect their cardholders
+
 ##### Data Flows
 The following Elasticsearch data flows were used during the definition of use cases:
 1. User storing data into elastic search - *Example: Fraud Analyst types notes from customer interaction which are then stored in Elasticsearch*
 2. System pushes data into cluster - *Example: Credit Card transaction data pushed in Elasticsearch from other systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
 4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
-5. Monitoring Network Traffic
+5. Alert to Fraud Analyst - *Example: Scheduled search in Elasticsearch sends fraud alert to Analyst when suspicious transactions occur*
 
 ##### Threat Actor Examples
 There are many threat actors that might want to attack an Elasticsearch cluster when it contains customer information or other valuable data.  Threat actors might also want to disrupt the business functions that Elasticsearch provides to the Fraud Monitoring unit.  The following are some examples of threat actors identified for this scenario.
@@ -43,8 +44,15 @@ Elasticsearch does seem to include features in this area, although these securit
 ##### User Searches for Data
 Task 4 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
 
-##### Monitoring Network Traffic
+##### Alert to Fraud Analyst
 Task 5 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+
+In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case on a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The [misuse case](ADD) for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for  important alerts that need analyst attention.
+
+Security Requirements
+* Retain an audit log of all generated alerts
+
+Add Reflection 
 
 ### Documentation Review
 Task 6
