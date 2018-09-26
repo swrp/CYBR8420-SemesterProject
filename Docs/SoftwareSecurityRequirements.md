@@ -50,7 +50,7 @@ In many environments, Elasticsearch might be used to monitor incoming data for s
 Security Requirements
 * Retain an audit log of all generated alerts
 * Allow alerts to be delivered to a ticketing system or by a protocol other than email
-* Alert emails should be encrypted when sent with TLS or STARTTLS
+* Alert emails should be encrypted when sent with TLS or STARTTLS  
 
 Elasticsearch (with the X-Pack features) does include the ability for [alerting](https://www.elastic.co/guide/en/elastic-stack-overview/current/xpack-alerting.html), and alerts can be sent in [many forms](https://www.elastic.co/guide/en/elastic-stack-overview/current/actions.html).  The ability to send alerts an an email or webhook action would likely allow the an IT service management system to issue a service ticket when an alert is generated.  The documentation also indicates that the software does indeed have the ability to use the STARTTLS protocol when [configuring email settings](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/actions-email.html#configuring-email)
 
