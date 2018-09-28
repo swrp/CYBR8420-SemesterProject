@@ -56,7 +56,28 @@ Security Requirements
 Elasticsearch (with the X-Pack features) does include the ability for [alerting](https://www.elastic.co/guide/en/elastic-stack-overview/current/xpack-alerting.html), and alerts can be sent in [many forms](https://www.elastic.co/guide/en/elastic-stack-overview/current/actions.html).  The ability to send alerts as an email or webhook action would likely allow an IT service management system to issue a service ticket when an alert is generated.  The documentation also indicates that the software does indeed have the ability to use the STARTTLS protocol when [configuring email settings](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/actions-email.html#configuring-email)
 
 ### Documentation Review
-Task 6
+Installation Settings
+* Security has to be enabled explicitly using X-pack settings while installing Elasticsearch, Kibana, Logstash, Beats and Elasticsearch Hardoop as it disabled by default.
+* Elastic cloud hosted on elastic search has X-pack always installed so any cluster can be easily monitored and secured.
+* Security disabled at the node means it is also disabled for all Kibana instances connected to this Elasticsearch.
+General Settings
+* Elastic search has “changeme” as the default password and elastic search accepts the continuous usage of this password.
+* The passwords are hashed and then stored. There are a bunch of hashing algorithms to select from.
+* Elastic search defaults the username of the anonymous user but requires specification of roles associated with the user. There is a functionality of the user providing credential to request action based on the given permissions. An HTTP 403 is returned if the user does not have appropriate permissions.
+* Built in token service is disabled to prevent sniffing of a token from a plain http connection. Cluster generates a cryptographic key by default which is used to encrypt and authenticate the tokens.
+Realm Settings
+Realm settings have to be configured depending on the realm type. Also, the priority of the realm within the realm chain has to be configured.
+* In a native realm, the time to live for cached user entries, maximum number of user entries and the hashing algorithm can be set. If not set, each of them is set to their default.
+* In a LDAP realm, URL, load balancing and failover types, DN of the user that is used to bind the LDAP and perform searches and the password for the user along with DN templates and group attribute and a variety of others can be defined. Pooling for user search can be enabled and health checks can be performed on them.
+* In Active Directory realm, X-pack security attempts to authenticate against the specified URL and load balancing is brought into effect in case of multiple URLs defined. Much of the attributes that can be defined are similar to the LDAP realm. Metadata of all additional attributes to be loaded into the LDAP server along with TCP & SSL attributes can be defined.
+* In PKI realm a pattern is specified which is then used to extract username from certificate DN. Trustore and its passwords are specified same as in LDAP and AD realms. Trustore stores the path to the Java keystore file that contains the certificates to trust.
+* In SAML realm, the Entity ID (URL with maximum length of 1024 characters) of the SAML Identity provider is specified. The path to a metadata file is also specified along with other metadata attributes. Also, X-pack security has the functionality of signing outgoing SAML messages by configuring a signing key. Encryption key is configured, using which X-pack security publishes an encryption certificate while the generation of metadata. This is used to decrypt the incoming SAML content.
+* In Kerberos realm, keytab path is specified. This would contain the service principal used by that particular Elasticsearch node.
+TLS/SSL settings
+* TLS/SSL settings are configured to include supported protocols, control the server’s behavior with respect to requesting a certificate from client connections. Also, the verification that the certificates have been signed by a trusted authority. Configurations can be made so that PKCS #12 container files can be used by X-pack security to contain the private key and certificates to be trusted.
+* Settings are available similarly for both default transport and each transport profile. IP filtering can be enabled by allowing or denting specific IP addresses. Traffic can also be allowed or denied for specific ports or profiles.
+* Elasticsearch mitigates the issue of credential theft by storing a hashed version of user credentials in memory. The default algorithm used for this purpose is SHA-256, but other algorithms can also be selected.
+
 
 ### Project Links
 * Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
