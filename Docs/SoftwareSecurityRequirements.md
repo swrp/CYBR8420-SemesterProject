@@ -10,7 +10,7 @@ To better define realistic security requirements for Elasticsearch the following
 
 ##### Data Flows
 The following Elasticsearch data flows were used during the definition of use cases:
-1. User storing data into elastic search - *Example: Fraud Analyst types information regarding fraudulent transactions from customer phone call which are then stored in Elasticsearch*
+1. User updating data into elastic search based on role based access - *Example: Fraud Analyst performing create/read/write/update/delete operations on the data documents which are stored in the elastic search.
 2. System pushes data into cluster - *Example: Credit Card transaction metadata pushed in Elasticsearch from other transaction processing systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
 4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
@@ -25,8 +25,21 @@ There are many threat actors that might want to attack an Elasticsearch cluster 
 
 ### Use Cases / Misuse Cases
 
-##### User Stores Data 
-Task 1 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+##### 1. User updating data into elastic search based on role based access
+![Privileges for accessing data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagadanew/Misuse%20Cases/Misuse%20Case_Controlling%20Data%20Access%20and%20Actions%20on%20data_ORIGINAL.png)
+
+Elasticsearch is used for many purposes, it is used by many organizations to store and retrieve intricate data structures which are serialized as JSON documents. Technically, JSON documents (Data objects) that are stored in the elastic search, every field in the data is indexed by default. The stored documents can be retrieved, accessed and update data from any node in the cluster based on the authorized access of the user. Also, user can perform certain CRUD operations based on role-based access control on the data.
+
+The misuse case mainly focused on performing CRUD operations on the data documents in the Elastic cluster by unauthorized internal Malicious employee. Different operations are performed on the data to manipulate or to steal customer information. Seems like Elastic search has implemented the protection mechanism for the role-based user access. Ways to control what data users can have access to and what tasks they can perform based on the security privileges are clearly documented in the [Elasticsearch privileges page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html)
+
+**Security Requirements**:
+* Role-based access control should be enabled to prevent users from performing unauthorized CURD actions on the data.
+* Enable the IP filtering feature to prevent blacklisted IP’s from joining the cluster or accessing the data documents. For example, the malicious user attempting to join the cluster without permissions.
+
+Elasticsearch seems to have these security features that are packaged in X-Pack module. These features must be enabled by the user based on the organization usage. Role based access controls and security privileges are very clearly documented in their documentation [Role based access controls page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/authorization.html) and [Cluster Security Privileges page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html). 
+
+From my observation, Elasticsearch failed in securing the customer data which is stored in the elastic cluster from the Ransomware attack. [Ransomware Attack on Elastic Cluster](https://www.zdnet.com/article/elasticsearch-ransomware-attacks-now-number-in-the-thousands/). But, they have a feature of IP filtering through which only whitelisted ones only can access and perform certain operations on data documents and entering into main master elastic cluster. The way this feature works is documented in the [Ip filtering page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/ip-filtering.html).
+
 
 ##### System Uploads Data
 Task 2 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
