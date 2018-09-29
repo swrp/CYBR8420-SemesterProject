@@ -10,7 +10,7 @@ To better define realistic security requirements for Elasticsearch the following
 
 ##### Data Flows
 The following Elasticsearch data flows were used during the definition of use cases:
-1. User updating data into elastic search based on role based access - *Example: Fraud Analyst performing create/read/write/update/delete operations on the data documents which are stored in the elastic search.
+1. User updating data into elastic search based on role based access - *Example: Fraud Analyst performs create/read/write/update/delete operations based on the fraudulent transactions from customer phone call and which are then stored in Elasticsearch*
 2. System pushes data into cluster - *Example: Credit Card transaction metadata pushed in Elasticsearch from other transaction processing systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
 4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
