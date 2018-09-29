@@ -45,7 +45,9 @@ From my observation, Elasticsearch failed in securing the customer data which is
 Task 2 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
 
 ##### Internal Cluster Communication
-Elasticsearch is often deployed as a multi-node cluster in larger environments to provide data redundancy and increased performance.  There are a variety of protocols that make up the data flow between systems to accomplish smooth, scalable operations of the software.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Cluster%20Communication.jpg) for this data flow highlights attacks that might target cluster nodes when a new node joins the cluster or  nodes perform data replication.  
+Elasticsearch is often deployed as a multi-node cluster in larger environments to provide data redundancy and increased performance.  There are a variety of protocols that make up the data flow between systems to accomplish smooth, scalable operations of the software.  The misuse case for this data flow highlights attacks that might target cluster nodes when a new node joins the cluster or  nodes perform data replication.  
+
+![cluster misuse case diagram](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Cluster%20Communication%20-%20.jpeg)
 
 Security Requirements
 * Authenticate all new nodes that request to join the cluster to verify authorization
@@ -73,7 +75,9 @@ Attempting to modify the data (using CSRF, XSS, session hijacking)on kibana can 
 Configurations can be made to restrict access limited to authorized users using
 [X-Pack Security](https://www.elastic.co/guide/en/elastic-stack-overview/current/setting-up-authentication.html). 
 ##### Alert to Fraud Analyst
-In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case of a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Alerting.jpg) for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for important alerts that need analyst attention.
+In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case of a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The misuse case for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for important alerts that need analyst attention.
+
+![alerting misuse case diagram](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Alerting.jpeg)
 
 Security Requirements
 * Retain an audit log of all generated alerts
