@@ -10,10 +10,10 @@ To better define realistic security requirements for Elasticsearch the following
 
 ##### Data Flows
 The following Elasticsearch data flows were used during the definition of use cases:
-1. User storing data into elastic search - *Example: Fraud Analyst types information regarding fraudulent transactions from customer phone call which are then stored in Elasticsearch*
+1. User updating data into elastic search based on role based access - *Example: Fraud Analyst performs create/read/write/update/delete operations based on the fraudulent transactions from customer phone call and which are then stored in Elasticsearch*
 2. System pushes data into cluster - *Example: Credit Card transaction metadata pushed in Elasticsearch from other transaction processing systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
-4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
+4. Analyst queries for data from cluster - *Example: Data Analyst of the organization pulls reports of fraud activity from elastic cluster*
 5. Alert to Fraud Analyst - *Example: Scheduled search in Elasticsearch sends fraud alert to Analyst when suspicious transactions occur*
 
 ##### Threat Actor Examples
@@ -25,8 +25,21 @@ There are many threat actors that might want to attack an Elasticsearch cluster 
 
 ### Use Cases / Misuse Cases
 
-##### User Stores Data 
-Task 1 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+##### 1. User updating data into elastic search based on role based access
+![Privileges for accessing data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagadanew/Misuse%20Cases/Misuse%20Case_Controlling%20Data%20Access%20and%20Actions%20on%20data_ORIGINAL.png)
+
+Elasticsearch is used for many purposes, it is used by many organizations to store and retrieve intricate data structures which are serialized as JSON documents. Technically, JSON documents (Data objects) that are stored in the elastic search, every field in the data is indexed by default. The stored documents can be retrieved, accessed and update data from any node in the cluster based on the authorized access of the user. Also, user can perform certain CRUD operations based on role-based access control on the data.
+
+The misuse case mainly focused on performing CRUD operations on the data documents in the Elastic cluster by unauthorized internal Malicious employee. Different operations are performed on the data to manipulate or to steal customer information. Seems like Elastic search has implemented the protection mechanism for the role-based user access. Ways to control what data users can have access to and what tasks they can perform based on the security privileges are clearly documented in the [Elasticsearch privileges page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html)
+
+**Security Requirements**:
+* Role-based access control should be enabled to prevent users from performing unauthorized CURD actions on the data.
+* Enable the IP filtering feature to prevent blacklisted IP’s from joining the cluster or accessing the data documents. For example, the malicious user attempting to join the cluster without permissions.
+
+Elasticsearch seems to have these security features that are packaged in X-Pack module. These features must be enabled by the user based on the organization usage. Role based access controls and security privileges are very clearly documented in their documentation [Role based access controls page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/authorization.html) and [Cluster Security Privileges page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html). 
+
+From my observation, Elasticsearch failed in securing the customer data which is stored in the elastic cluster from the Ransomware attack. [Ransomware Attack on Elastic Cluster](https://www.zdnet.com/article/elasticsearch-ransomware-attacks-now-number-in-the-thousands/). But, they have a feature of IP filtering through which only whitelisted ones only can access and perform certain operations on data documents and entering into main master elastic cluster. The way this feature works is documented in the [Ip filtering page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/ip-filtering.html).
+
 
 ##### System Uploads Data
 Task 2 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
@@ -42,9 +55,23 @@ Security Requirements
 Elasticsearch does seem to include features in this area, although these security features are in the X-Pack paid modules.  Encrypting cluster communication and authenticating nodes can be done by [configuring TLS and deploying certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#tls-transport) to each node.  Elasticsearch also implements a feature called TCP Transport Profiles that allow cluster traffic between nodes to be[ segmented from other data flows](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/separating-node-client-traffic.html) by designating specific ports or even interfaces for cluster communication.
 
 
-##### User Searches for Data
-Task 4 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+#####  Analyst queries for data from cluster
+In the process of improving the performance outcomes, individual organizations try to examine all the fraud activities by performing a data analysis. The analyst trying to investigate the data needs to query all the transactional information and search for fraud activities to view them on the dashboard and export them to reports. 
+![Mis-use case](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp/Misuse%20Cases/AnalystQueryData.jpeg) 
 
+Security Requirements
+* Use Encrypted token patterns
+* Account lockout policies after certain failed login attempts
+* Grant access to authorized users 
+
+Integrating elastic cluster with ArcSight SIEM helps to get alerts if any attacker tries to brute force through any account. 
+This [link](https://www.elastic.co/blog/integrating-elasticsearch-with-arcsight-siem-part-4) describes how to configure accounts to get notified if there are any brute force attempts.  
+
+Attempting to modify the data (using CSRF, XSS, session hijacking)on kibana can be prevented by using encrypted token patterns. Elasticsearch fixed these issues from
+[Version 4.2.1](https://www.elastic.co/blog/kibana-4-2-1-and-4-1-3) of kibana.
+
+Configurations can be made to restrict access limited to authorized users using
+[X-Pack Security](https://www.elastic.co/guide/en/elastic-stack-overview/current/setting-up-authentication.html). 
 ##### Alert to Fraud Analyst
 In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case of a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Alerting.jpg) for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for important alerts that need analyst attention.
 
