@@ -53,10 +53,10 @@ Security Requirements
 
 Integrating elastic cluster with ArcSight SIEM helps to get alerts if any attacker tries to brute force through any account. 
 This [link](https://www.elastic.co/blog/integrating-elasticsearch-with-arcsight-siem-part-4) describes how to configure accounts to get notified if there are any brute force attempts.  
-Attempting to fake the data on kibana was fixed by the elasticsearch team during the bug fixes released for 
-[Version 4](https://www.elastic.co/blog/kibana-4-2-1-and-4-1-3).
-Configurations to allow authorized access to elastic cluster can be done using 
-[X-Pack Security](https://www.elastic.co/guide/en/x-pack/current/authorization.html). 
+Attempting to modify the data (using CSRF, XSS, session hijacking)on kibana can be prevented by using encrypted token patterns. Elasticsearch fixed these issues from
+[Version 4.2.1](https://www.elastic.co/blog/kibana-4-2-1-and-4-1-3) of kibana.
+Configurations restrict access to authorized users to elastic cluster can be done using
+[X-Pack Security](https://www.elastic.co/guide/en/elastic-stack-overview/current/setting-up-authentication.html). 
 ##### Alert to Fraud Analyst
 In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case of a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Alerting.jpg) for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for important alerts that need analyst attention.
 
