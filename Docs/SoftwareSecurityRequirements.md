@@ -44,7 +44,7 @@ Elasticsearch does seem to include features in this area, although these securit
 
 #####  Analyst queries for data from cluster
 In the process of improving the performance outcomes, individual organizations try to examine all the fraud activities by performing a data analysis. The analyst trying to investigate the data needs to query all the transactional information and search for fraud activities to view them on the dashboard and export them to reports. 
-[Mis-use case](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp/Misuse%20Cases/AnalystQueryData.jpeg) for this data flow represents how attackers can try to fake the data before it reaches the analyst dashboard or steal data when it gets pulled from the cluster. 
+![Mis-use case](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp/Misuse%20Cases/AnalystQueryData.jpeg) 
 
 Security Requirements
 * Use Encrypted token patterns
