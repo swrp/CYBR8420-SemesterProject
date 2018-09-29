@@ -25,14 +25,14 @@ There are many threat actors that might want to attack an Elasticsearch cluster 
 
 ### Use Cases / Misuse Cases
 
-##### 1. User updating data into elastic search based on role based access
+#### User updates data
 ![Privileges for accessing data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagadanew/Misuse%20Cases/Misuse%20Case_Controlling%20Data%20Access%20and%20Actions%20on%20data_ORIGINAL.png)
 
 Elasticsearch is used for many purposes, it is used by many organizations to store and retrieve intricate data structures which are serialized as JSON documents. Technically, JSON documents (Data objects) that are stored in the elastic search, every field in the data is indexed by default. The stored documents can be retrieved, accessed and update data from any node in the cluster based on the authorized access of the user. Also, user can perform certain CRUD operations based on role-based access control on the data.
 
 The misuse case mainly focused on performing CRUD operations on the data documents in the Elastic cluster by unauthorized internal Malicious employee. Different operations are performed on the data to manipulate or to steal customer information. Seems like Elastic search has implemented the protection mechanism for the role-based user access. Ways to control what data users can have access to and what tasks they can perform based on the security privileges are clearly documented in the [Elasticsearch privileges page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html)
 
-**Security Requirements**:
+Security Requirements
 * Role-based access control should be enabled to prevent users from performing unauthorized CURD actions on the data.
 * Enable the IP filtering feature to prevent blacklisted IP’s from joining the cluster or accessing the data documents. For example, the malicious user attempting to join the cluster without permissions.
 
