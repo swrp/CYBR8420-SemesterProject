@@ -13,7 +13,7 @@ The following Elasticsearch data flows were used during the definition of use ca
 1. User storing data into elastic search - *Example: Fraud Analyst types information regarding fraudulent transactions from customer phone call which are then stored in Elasticsearch*
 2. System pushes data into cluster - *Example: Credit Card transaction metadata pushed in Elasticsearch from other transaction processing systems*
 3. Internal cluster communication - *Example: Elasticsearch nodes copy data between systems for redundancy*
-4. User queries for data from cluster - *Example: Fraud Analyst views alerts or reports from Elasticsearch*
+4. Analyst queries for data from cluster - *Example: Data Analyst of the organization pulls reports of fraud activity from elastic cluster*
 5. Alert to Fraud Analyst - *Example: Scheduled search in Elasticsearch sends fraud alert to Analyst when suspicious transactions occur*
 
 ##### Threat Actor Examples
@@ -42,9 +42,23 @@ Security Requirements
 Elasticsearch does seem to include features in this area, although these security features are in the X-Pack paid modules.  Encrypting cluster communication and authenticating nodes can be done by [configuring TLS and deploying certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#tls-transport) to each node.  Elasticsearch also implements a feature called TCP Transport Profiles that allow cluster traffic between nodes to be[ segmented from other data flows](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/separating-node-client-traffic.html) by designating specific ports or even interfaces for cluster communication.
 
 
-##### User Searches for Data
-Task 4 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+#####  Analyst queries for data from cluster
+In the process of improving the performance outcomes, individual organizations try to examine all the fraud activities by performing a data analysis. The analyst trying to investigate the data needs to query all the transactional information and search for fraud activities to view them on the dashboard and export them to reports. 
+![Mis-use case](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp/Misuse%20Cases/AnalystQueryData.jpeg) 
 
+Security Requirements
+* Use Encrypted token patterns
+* Account lockout policies after certain failed login attempts
+* Grant access to authorized users 
+
+Integrating elastic cluster with ArcSight SIEM helps to get alerts if any attacker tries to brute force through any account. 
+This [link](https://www.elastic.co/blog/integrating-elasticsearch-with-arcsight-siem-part-4) describes how to configure accounts to get notified if there are any brute force attempts.  
+
+Attempting to modify the data (using CSRF, XSS, session hijacking)on kibana can be prevented by using encrypted token patterns. Elasticsearch fixed these issues from
+[Version 4.2.1](https://www.elastic.co/blog/kibana-4-2-1-and-4-1-3) of kibana.
+
+Configurations can be made to restrict access limited to authorized users using
+[X-Pack Security](https://www.elastic.co/guide/en/elastic-stack-overview/current/setting-up-authentication.html). 
 ##### Alert to Fraud Analyst
 In many environments, Elasticsearch might be used to monitor incoming data for specific conditions, and when that condition is met, some type of alert or notification might be raised to a stakeholder.  In the case of a fraud monitoring department, Elasticsearch might be used to run scheduled searches every few minutes looking for outliers in recent credit card transactions.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Alerting.jpg) for this data flow shows how attackers might be able to target email alerts and clarifies that other delivery options are needed for important alerts that need analyst attention.
 
