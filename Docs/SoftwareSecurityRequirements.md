@@ -29,7 +29,15 @@ There are many threat actors that might want to attack an Elasticsearch cluster 
 Task 1 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
 
 ##### System Uploads Data
-Task 2 - Description, link to misuse case, list security requirements, reflection (including links to documentation)  
+Elasticsearch is almost completely managed via HTTP requests using JSON objects. A system such as a Merchant Manager Application sends a post request to create the index and specifies data in the request body as JSON objects. The following misuse case diagram highlights the attacks that might target the data flow when a system pushes data into elastic search.
+![system pushes data into elasticsearch](https://user-images.githubusercontent.com/33559403/46239494-7dcd2400-c356-11e8-9ac7-f2a421941549.png)
+Security Requirements
+* Transaction and customer information should be encrypted or communicated over an encrypted channel.
+* Monitor and audit logs of all data that is entering the system.
+* Data integrity to prevent corrupt data entering the system. This could be done by parameterizing entries, input validation and output sanitization.
+
+Elastic search achieves input validation by adding character filters to an analyzer to process and validate the text before it is passed to the tokenizer. The mapping character filter achieves parameterization. Output sanitization is possible by adding Logstash and sanitizing of events in Logstash before forwarding it to Logstash before forwarding it to Elasticsearch. This can be found in the [Elasticsearch guide] (https://www.elastic.co/guide/en/elasticsearch/guide/master/char-filters.html). Elasticsearch also has features of channel encryption and auditing.
+  
 
 ##### Internal Cluster Communication
 Elasticsearch is often deployed as a multi-node cluster in larger environments to provide data redundancy and increased performance.  There are a variety of protocols that make up the data flow between systems to accomplish smooth, scalable operations of the software.  The [misuse case](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Elasticsearch_Cluster%20Communication.jpg) for this data flow highlights attacks that might target cluster nodes when a new node joins the cluster or  nodes perform data replication.  
