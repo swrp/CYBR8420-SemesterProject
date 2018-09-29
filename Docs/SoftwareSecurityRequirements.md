@@ -36,7 +36,7 @@ Security Requirements
 * Monitor and audit logs of all data that is entering the system.
 * Data integrity to prevent corrupt data entering the system. This could be done by parameterizing entries, input validation and output sanitization.
 
-Elastic search achieves input validation by adding character filters to an analyzer to process and validate the text before it is passed to the tokenizer. The mapping character filter achieves parameterization. Output sanitization is possible by adding Logstash and sanitizing of events in Logstash before forwarding it to Logstash before forwarding it to Elasticsearch. This can be found in the [Elasticsearch guide] (https://www.elastic.co/guide/en/elasticsearch/guide/master/char-filters.html). Elasticsearch also has features of channel encryption and auditing.
+Elastic search achieves input validation by adding character filters to an analyzer to process and validate the text before it is passed to the tokenizer. The mapping character filter achieves parameterization. Output sanitization is possible by adding Logstash and sanitizing of events in Logstash before forwarding it to Logstash before forwarding it to Elasticsearch. This can be found in the [Elasticsearch guide](https://www.elastic.co/guide/en/elasticsearch/guide/master/char-filters.html). Elasticsearch also has features of channel encryption and auditing.
   
 
 ##### Internal Cluster Communication
