@@ -6,9 +6,19 @@
 
 ## Assurance Claim - 3: 
 
-## Assurance Claim 4: 
-**Top Claim 4: Elasticsearch minimizes the possibility of network eavesdropping attacks.**
 
+
+
+
+
+
+
+
+
+
+
+
+## Assurance Claim 4:
 ![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%204.png)
 
 * **Evidence E1:** When [generating certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#node-certificates), Elasticsearch allows private keys to be encrypted with a password, and the passwords to be stored in the Elasticsearch [keystore](https://www.elastic.co/guide/en/elasticsearch/reference/current/secure-settings.html).  The keystore provides an extra layer of protection beyond simple file system permissions.
