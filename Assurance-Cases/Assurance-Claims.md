@@ -39,8 +39,8 @@
 
 * **Evidence E1:** A application penetration test would be the best way to verify that the logging process cannot be forced into a denial of service condition by denying the release or closure of the log file.  This testing could provide assurance that the file would not grow too large or could not be closed for log rotation.
 * **Evidence E2:** The Elasticsearch logging process should only append to the log file and will never overwrite data in the open file.  To verify this expected operation, a code review of the audit logging module should be conducted.
-* **Evidence E3:** Elasticsearch can be configured to add [multiple outputs](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/auditing.html#auditing) for audit logs including the host file system and an Elasticsearch index.
-* **Evidence E4:** To verify that only users with the [superuser role](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/built-in-roles.html) can configure the audit log settings some testing on the application could be performed.
+* **Evidence E3:** Elasticsearch can be configured to add [duplicate outputs](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/auditing.html#auditing) for audit logs including the host file system and an Elasticsearch index.
+* **Evidence E4:** In Elasticsearch, only a user with the [superuser role](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/built-in-roles.html) should be able to configure the audit log settings.  Testing of the application could be performed to verify other user roles cannot edit these settings.
 * **Evidence E5:** Elasticsearch needs to capture relevant data elements and sufficient [audit log types](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/audit-event-types.html) to ensure that security issues can be properly investigated.
 
 
