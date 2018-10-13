@@ -32,10 +32,16 @@
 * **Evidence E7:** The [IP Filtering](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/ip-filtering.html#ip-filtering) options in Elasticsearch can limit which hosts are allowed to connect.  This further limits connections from unauthorized systems.
 * **Evidence E8:**  Elasticsearch provides [segmentation features](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/separating-node-client-traffic.html#separating-node-client-traffic) that would allow cluster communication to be on a separate network than client communication.  An excellent method to test this would be a port scan to ensure logical separation exists as expected.
  
-## Assurance Claim - 5: 
+## Assurance Claim 5: 
 **Top Claim 5:  Elasticsearch's audit logging functions prevents tampering.**
 
-![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%205.png)
+![Audit Logging Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%205.png)
+
+* **Evidence E1:** A application penetration test would be the best way to verify that the logging process cannot be forced into a denial of service condition by denying the release or closure of the log file.  This testing could provide assurance that the file would not grow too large or could not be closed for log rotation.
+* **Evidence E2:** The Elasticsearch logging process should only append to the log file and will never overwrite data in the open file.  To verify this expected operation, a code review of the audit logging module should be conducted.
+* **Evidence E3:** Elasticsearch can be configured to add [multiple outputs](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/auditing.html#auditing) for audit logs including the host file system and an Elasticsearch index.
+* **Evidence E4:** To verify that only users with the [superuser role](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/built-in-roles.html) can configure the audit log settings some testing on the application could be performed.
+* **Evidence E5:** Elasticsearch needs to capture relevant data elements and sufficient [audit log types](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/audit-event-types.html) to ensure that security issues can be properly investigated.
 
 
 ### Project Links
