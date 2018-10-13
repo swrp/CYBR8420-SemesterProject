@@ -12,7 +12,14 @@
 * **Evidence E4:** To defend the illegitimate operation such as create/modify/update/delete on data documents administrator can able to assigns the access privilege permissions at field level to the user based on the role in the organization. [Role based access controls page](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/authorization.html) and [Privileges permissions](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/security-privileges.html) are clearly documented in their documentation page.
 
 
-## Assurance Claim - 2: 
+## Assurance Claim - 2:
+**Top Claim 3: Elasticsearch is sufficiently protected against resource injection.**
+![assurancecase2](https://user-images.githubusercontent.com/33559403/46900815-ebed0d00-ce65-11e8-8d19-b112d69ab9cd.png)
+* **Evidence 1:** Elasticsearch allows all scripts type and scripts contexts and to be executed by default but this setting can be modified to allow only [specific types]( https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-security.html) or contexts to be allowed.
+* **Evidence 2:** Elasticsearch [monitors and audits logs](https://www.elastic.co/guide/en/elastic-stack-overview/6.4/audit-event-types.html) to prevent unauthorized tampering of logs.
+* **Evidence 3:** Elasticsearch uses [Java security manager](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-security.html) to limit actions to be taken by portions of the code. This prevents unauthorized writing of files and listening to socket.
+* **Evidence 4:** Elasticsearch prevents forking or executing other processes by using [seccomp]( https://en.wikipedia.org/wiki/Seccomp) in Linux, [Seatbelt](https://www.chromium.org/developers/design-documents/sandbox/osx-sandboxing-design) in macOS and [ActiveProcessLimit]( https://msdn.microsoft.com/en-us/library/windows/desktop/ms684147) on Windows.
+* **Evidence 5:** Elasticsearch has [mapping character filter]( https://www.elastic.co/guide/en/elasticsearch/guide/master/char-filters.html) that achieves [parameterization]( https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-security.html).
 
 ## Assurance Claim - 3: 
 **Top Claim 3: Elasticsearch defends against suspicious login activity.**
