@@ -8,6 +8,9 @@
 
 ## Assurance Claim 4: 
 **Top Claim 4: Elasticsearch minimizes the possibility of network eavesdropping attacks.**
+
+![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%204.png)
+
 * **Evidence E1:** When [generating certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#node-certificates), Elasticsearch allows private keys to be encrypted with a password, and the passwords to be stored in the Elasticsearch [keystore](https://www.elastic.co/guide/en/elasticsearch/reference/current/secure-settings.html).  The keystore provides an extra layer of protection beyond simple file system permissions.
 * **Evidence E2:** To verify traffic is not being sent in plain text but rather an encrypted form, a packet capture could be conducted to verify API calls to Elasticsearch are indeed encrypted.  A simple packet capture could be done with Wireshark or another comparable tool. 
 * **Evidence E3:** To verify that all Elasticsearch nodes are using appropriate encryption settings for the given environment, a configuration management tool could be used to enforce the proper configurations or generate a periodic report that could be reviewed by administrative staff.
@@ -18,3 +21,11 @@
 * **Evidence E8:**  Elasticsearch provides [segmentation features](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/separating-node-client-traffic.html#separating-node-client-traffic) that would allow cluster communication to be on a separate network than client communication.  An excellent method to test this would be a port scan to ensure logical separation exists as expected.
  
 ## Assurance Claim - 5: 
+**Top Claim 5:  Elasticsearch's audit logging functions prevents tampering.**
+
+![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%205.png)
+
+
+### Project Links
+* Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
+* Project Board: https://github.com/swrp/CYBR8420-SemesterProject/projects/4
