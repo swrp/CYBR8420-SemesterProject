@@ -26,7 +26,7 @@ There are many threat actors that might want to attack an Elasticsearch cluster 
 ### Use Cases / Misuse Cases
 
 ##### User updates data
-![Privileges for accessing data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagadanew/Misuse%20Cases/Misuse%20Case_Controlling%20Data%20Access%20and%20Actions%20on%20data_ORIGINAL.png)
+![Privileges for accessing data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Misuse%20Cases/Misuse%20Case_Controlling%20Data%20Access%20and%20Actions%20on%20data_ORIGINAL.png)
 
 Elasticsearch is used for many purposes, it is used by many organizations to store and retrieve intricate data structures which are serialized as JSON documents. Technically, JSON documents (Data objects) that are stored in the elastic search, every field in the data is indexed by default. The stored documents can be retrieved, accessed and update data from any node in the cluster based on the authorized access of the user. Also, user can perform certain CRUD operations based on role-based access control on the data.
 
