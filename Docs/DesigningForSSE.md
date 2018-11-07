@@ -5,8 +5,9 @@
 
 
 #### Data Flow: Internal Cluster Communication
-* Level 0 DFD - LINK
-* Threat Model/Level 1 DFD - LINK
+Level 0 DFD  
+![Level 0 for Internal Cluster Communication](https://github.com/swrp/CYBR8420-SemesterProject/blob/mark/Threat%20Models/InternalClusterCommunication_Level_0.PNG)  
+Threat Model/Level 1 DFD 
 
 #### Data Flow:
 
@@ -16,6 +17,6 @@
 
 #### Data Flow:
 
-Project Links
+#### Project Links
 * Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
 * Project Board: https://github.com/swrp/CYBR8420-SemesterProject/projects/5
