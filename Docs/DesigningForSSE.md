@@ -2,12 +2,12 @@
 #### Data Flow: User Uploads Data
 Level 0 DFD
 
-![Level 0 for User Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow1.PNG)
+![Level 0 for User Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada-TMT/Threat%20Models/Analyst%20Pushes%20Data%20Into%20Cluster-Level-0.PNG)
 
 #### Data Flow: System Uploads Data
 Level 0 DFD
 
-![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow2.PNG)
+![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada-TMT/Threat%20Models/Application%20Pushes%20Data%20Into%20Cluster-Level_0.PNG)
 
 The complete threat report alongwith consolidated Level 1 diagram for system uploads data and user uploads data can be found <a href = "https://swrp.github.io/CYBR8420-SemesterProject/UpdatingDataToCluster.htm">here.</a>
 
