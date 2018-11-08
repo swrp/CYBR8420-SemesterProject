@@ -9,7 +9,7 @@ Level 0 DFD
 
 ![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow2.PNG)
 
-The complete threat report alongwith consolidated Level 1 diagram for system uploads data and user uploads data can be found [here](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/UpdatingData.htm)  
+The complete threat report alongwith consolidated Level 1 diagram for system uploads data and user uploads data can be found [here](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/UpdatingData.htm).
 
 #### Data Flow: Internal Cluster Communication
 Level 0 DFD  
