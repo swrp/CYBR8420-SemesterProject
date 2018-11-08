@@ -1,8 +1,11 @@
 ## Designing for Software Security Engineering
+#### Data Flow: User Uploads Data
+Level 0 DFD
+![Level 0 for User Uploads Data]()
 
-
-#### Data Flow:
-
+#### Data Flow: System Uploads Data
+Level 0 DFD
+![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow2.PNG)
 
 #### Data Flow: Internal Cluster Communication
 Level 0 DFD  
