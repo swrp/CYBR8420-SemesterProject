@@ -13,7 +13,7 @@ The complete threat report alongwith consolidated Level 1 diagram for system upl
 
 #### Data Flow: Internal Cluster Communication
 Level 0 DFD  
-![Level 0 for Internal Cluster Communication](https://github.com/swrp/CYBR8420-SemesterProject/blob/mark/Threat%20Models/InternalClusterCommunication_Level_0.PNG)  
+![Level 0 for Internal Cluster Communication](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Threat%20Models/InternalClusterCommunication_Level_0.PNG)  
 
 Threat Model/Level 1 DFD  
 A full threat model and Level 1 data flow diagram has been completed <a href = "https://swrp.github.io/CYBR8420-SemesterProject/InternalClusterCommunication_ThreatReport.htm">here</a>.
