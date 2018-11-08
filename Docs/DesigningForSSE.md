@@ -1,8 +1,15 @@
 ## Designing for Software Security Engineering
+#### Data Flow: User Uploads Data
+Level 0 DFD
 
+![Level 0 for User Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow1.PNG)
 
-#### Data Flow:
+#### Data Flow: System Uploads Data
+Level 0 DFD
 
+![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/Level0_DataFlow2.PNG)
+
+The complete threat report alongwith consolidated Level 1 diagram for system uploads data and user uploads data can be found [here](https://github.com/swrp/CYBR8420-SemesterProject/blob/BhawiniTripathi-TMT/UpdatingData.htm).
 
 #### Data Flow: Internal Cluster Communication
 Level 0 DFD  
@@ -16,7 +23,7 @@ As indicated in several sections of the threat model, Elasticsearch has a fairly
 
 Elasticsearch has methods to authenticate all cluster nodes, making spoofing very difficult unless a member of the cluster is compromised.  Some security features, like strong encryption of all traffic, certainly minimize Information Disclosure threats, but also could reduce tampering,  Whitelisting and dedicated networks specifically for cluster communication drastically reduce the risk of denial of service attacks. 
 
-Audit log generation options are available to ensure integrity of the log files and repudiation threats.  There is event an event type in the Elasticsearch system called "tampered_request" that specifically is logged if a tampered search request is discovered.  Role based access control and the default behavior of not running the software as root, but rather with standard user access reduces the risk of elevation of privilege.
+Audit log generation options are available to ensure integrity of the log files and repudiation threats.  There is event an event type in the Elasticsearch system called "tampered_request" that specifically is logged if a tampered search request is discovered.  Role based access control and the default behavior of not running the software as root, but rather with standard user access reduces the risk of elevation of privilege. Also, Elasticsearch has input validation, AD/LDAP integration which helps prevent repudiation. Disabling dynamic scripting helps prevent to Denial of Service attacks.
 
 The threat model and analysis did not reveal any significant design issues.
 
