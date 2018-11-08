@@ -9,7 +9,7 @@ Level 0 DFD
 ![Level 0 for Internal Cluster Communication](https://github.com/swrp/CYBR8420-SemesterProject/blob/mark/Threat%20Models/InternalClusterCommunication_Level_0.PNG)  
 
 Threat Model/Level 1 DFD  
-A full threat model and Level 1 data flow diagram has been completed [here](https://github.com/swrp/CYBR8420-SemesterProject/blob/mark/Threat%20Models/InternalClusterCommunication_ThreatReport.htm).  
+A full threat model and Level 1 data flow diagram has been completed <a href = "https://swrp.github.io/CYBR8420-SemesterProject/blob/mark/InternalClusterCommunication_ThreatReport.htm">here </a>
 
 Threat Model Analysis  
 As indicated in several sections of the threat model, Elasticsearch has a fairly robust security solution provided by the X-Pack features.  When doing the analysis, these security features directly addressed the STRIDE threats in many cases.  When thinking specifically about the Internal Cluster Communication data flow, the security features included seem to be all encompassing from the documentation available.
