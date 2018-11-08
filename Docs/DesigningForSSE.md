@@ -18,7 +18,7 @@ Level 0 DFD
 Threat Model/Level 1 DFD  
 A full threat model and Level 1 data flow diagram has been completed <a href = "https://swrp.github.io/CYBR8420-SemesterProject/InternalClusterCommunication_ThreatReport.htm">here </a>
 
-#### Data Flow: Use Case: Analyst queries for data from cluster**
+#### Data Flow: Use Case: Analyst queries for data from cluster
 
 Level 0 DFD
 
