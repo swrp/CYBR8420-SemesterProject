@@ -13,7 +13,15 @@ Threat Model/Level 1 DFD
 
 
 #### Data Flow:
+**Use Case: Analyst queries for data from cluster**
 
+Level 0 DFD
+![]()
+
+[Level 1 Threat Report]()
+
+**Observations**
+The threat report generated 14 threats of which 
 
 #### Data Flow:
 
