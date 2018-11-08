@@ -16,9 +16,10 @@ Threat Model/Level 1 DFD
 **Use Case: Analyst queries for data from cluster**
 
 Level 0 DFD
-![]()
 
-[Level 1 Threat Report]()
+![Level 0 Analyst Querying for Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp-TMT/Threat%20Models/AnalystQueriesForFraudReports.png)
+
+<a href = "https://swrp.github.io/CYBR8420-SemesterProject/blob/swrp-TMT/Threat%20Models/AnalystQueriesForFraudReprts.htm"> Click here for a complete Level-1 threat report</a>
 
 **Observations**
 The threat report generated 14 threats of which 
