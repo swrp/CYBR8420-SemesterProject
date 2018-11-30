@@ -12,6 +12,27 @@ At the line 40 default pass phrase key value is **hard coded** which is used to 
 Using our misuse case [User updates data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/submissions/SoftwareSecurityRequirements.md#User-updates-data) and threat report, we performed manual code review to verify the [CWE-284: Improper Access Control]( https://cwe.mitre.org/data/definitions/284.html). We have observed that all security implementations were accomplished by managing the settings for **Access Control based on user role** and handling document-level privileges. There is medium severity issue related to the **Trusting all the incoming SSL certificates** from the server. This is most relatable to [CWE-300: Channel Accessible by Non-Endpoint](https://cwe.mitre.org/data/definitions/300.html) which could potentially maximize the chances of affecting the integrity and confidentiality of the data. Attacker can read or modify the communication taking advantage of this weakness. 
 However, Elasticsearch implemented the mitigation to this vulnerability by verfying the certicates using standrd X.509 at [Line 91](https://github.com/elastic/elasticsearch/blob/e179fd1274331e30bc3ddfb1ab789fb0d38c92bd/x-pack/plugin/core/src/main/java/org/elasticsearch/xpack/core/ssl/RestrictedTrustManager.java#L91) in RestrictedTrustManager.java.
 
+For the use case [System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/submissions/SoftwareSecurityRequirements.md), input sanitization was identified as the most important security requirement. The manual code analysis was hence focussed on th eCWEs that challenge input sanitization. The following CWEs were identified and investigated:
+
+###[CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)
+This medium-severity vulnerability has been mitigated in many portions of the code base, however in Line 117 of [DataHistogramGroupConfig.java](https://github.com/elastic/elasticsearch/blob/master/x-pack/plugin/core/src/main/java/org/elasticsearch/xpack/core/rollup/job/DateHistogramGroupConfig.java) the vulnerability is still present.
+![serializationflaw](https://user-images.githubusercontent.com/33559403/49319206-56631680-f4c1-11e8-87bb-f549f8c4b0fb.PNG)
+There is no way of knowing what is being deserialized before it has been decoded. This flaw could be exploitaed to effect a complete remote command execution and the host could takeover on the application accepting serialized objects.
+
+**Mitigation:** The return type and the list of the expected classes that might be accepted to show up in serialized objects should be specified. Also, there can be a limit enforced on the number of the embedded objects and the bytes of input.
+
+###[CWE-235: Impropper Handling of Extra Parameters](https://cwe.mitre.org/data/definitions/502.html)
+This medium-severity vulnerability is HTTP Parameter Pollution. It is feasible to override or add HTTP get/post parameters by injecting query string delimiters. It might lead to various server-side and client-side attacks like overriding existing hardcoded HTTP parameters, modifying the application behaviour, access and exploit uncontrollable variables and bypass input validation checkpoints and web-application firewall rules. This vulnerability is present in lines 180, 181 of [SamlMetadataCommand.java](https://github.com/elastic/elasticsearch/blob/master/x-pack/plugin/security/src/main/java/org/elasticsearch/xpack/security/authc/saml/SamlMetadataCommand.java)
+![hpp_flaw](https://user-images.githubusercontent.com/33559403/49319741-f4f07700-f4c3-11e8-858a-0e80622b7211.PNG)
+
+**Mitigation:** URL encoding, filtering and strict data validation might be some of the most effective ways to mitigate this vulnerability.
+
+###[CWE-22: Improper Limitation of a Pathname to a restricted Directory ('Path Traversal')](http://cwe.mitre.org/data/definitions/22.html)
+This is one of the SANS Top-25and could lead to code-execution, data loss and denial of service when an outsider gives an input while constructing a filename and the resulting path points  outside of the intended directory. This vulnerability has been well remidiated in Elasticsearch as they decode and canonicalize inputs to the application current internal representation before validating them.
+
+
+
+
 
 
 ## Automated Tool Scan 
