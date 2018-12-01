@@ -33,3 +33,14 @@ Identified Versions: Elasticsearch Kibana before 4.1.3 and 4.2.x
 
 
 ## Automated Tool Scan
+After exploring the DHS SWAMP scanning platform we attempted to use the system to scan the Elasticsearch Java code files, however since Java 11 is required for the build process, and the SWAMP did not yet support this version, we weren't able to leverage the system.  We did, however, use the SWAMP platform to scan the Java Bytecode with Findbugs 3.0.1.  We also used the PMD 6.9.0 tool to scan the Java code files.
+
+#### Findbugs 3.0.1
+This tool was used in the SWAMP platform to scan the Elasticsearch Java Bytecode.  The initial output of the tool had thousands of findings but the built in reporting tool was very useful to filter out non-security related findings as well as findings that were part of the package but not necessarily the Elasticsearch code base (e.g. Apache Lucene, log4j, etc. )  The filtered report ([full report download](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Code%20Review%20Reports/fundbugs_elasticsearch_only.pdf)) was reduced to 40 medium severity issues and 558 low severity issues.  These findings were quite detailed and very useful in focusing our manual code review efforts.
+
+#### PMD 6.9.0
+The most recent version of the PMD tool was just downloaded locally to a Linux host and ran against the Elasticsearch codebase.  A scan of the entire Elasticsearch repository resulted in the PMD tool reporting over 16,000 findings ([full report download](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Code%20Review%20Reports/pmd_elasticsearch_scan.csv)) when using the built-in "quickstart.xml" ruleset.  According to PMD documentation all rules are divided into eight categories, one of which is "security", however this category only seems to contain two rules.  Out of the thousands of findings, the security category was the only one not to have any results.  Most findings from PMD were regarding code style, documentation, and best practices.  While the results were interesting to review, this scan didn't significantly assist us in our code analysis with regards to security.
+
+## Project Links
+* Team Repository: https://github.com/swrp/CYBR8420-SemesterProject
+* Project Board: https://github.com/swrp/CYBR8420-SemesterProject/projects/6
