@@ -21,7 +21,7 @@ There is no way of knowing what is being deserialized before it has been decoded
 **Mitigation:** The return type and the list of the expected classes that might be accepted to show up in serialized objects should be specified. Also, there can be a limit enforced on the number of the embedded objects and the bytes of input.
 
 [CWE-22: Improper Limitation of a Pathname to a restricted Directory ('Path Traversal')](http://cwe.mitre.org/data/definitions/22.html)
-This is one of the SANS Top-25 and could lead to code-execution, data loss and denial of service when an outsider gives an input while constructing a filename and the resulting path points  outside of the intended directory. This vulnerability has been well remidiated in Elasticsearch as they decode and canonicalize inputs to the application current internal representation before validating them. The data validation can be viewed in the [FileUtils.java](https://github.com/elastic/elasticsearch/blob/master/qa/vagrant/src/main/java/org/elasticsearch/packaging/util/FileUtils.java)
+This is one of the SANS Top-25 and could lead to code-execution, data loss and denial of service when an outsider gives an input while constructing a filename and the resulting path points  outside of the intended directory. This vulnerability has been well remidiated in Elasticsearch as they decode and canonicalize inputs to the application current internal representation before validating them. The data validation can be viewed in [FileUtils.java](https://github.com/elastic/elasticsearch/blob/master/qa/vagrant/src/main/java/org/elasticsearch/packaging/util/FileUtils.java).
 
 
 
