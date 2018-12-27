@@ -4,7 +4,7 @@
 
 **Top Claim 1: Elasticsearch prevents unauthorized access to the elastic cluster.**
 
-![Preventions of unauthorized access](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Assurance-Cases/Assurance%20Case-Preventing%20unauthorized%20access.png)
+![Preventions of unauthorized access](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Assurance-Claims/Assurance%20Case-Preventing%20unauthorized%20access.png)
 
 * **Evidence E1:** To gain unauthorized access to the elastic cluster, user must prove his/her identity via username and password credentials. [User authentication methods](https://www.elastic.co/guide/en/shield/current/setting-up-authentication.html) such as LDAP and active directory for managing and authentication are used in the Elasticsearch.
 * **Evidence E2:** To prevent anonymous access Elasticsearch added extra security shield in the authentication process of user. By [enabling the anonymous access](https://www.elastic.co/guide/en/shield/current/anonymous-access.html) security the authentication process is done is two phases – token extraction and user credential authentication. In the case when no authentication token was resolved, by default access requests are rejected and an authentication error is returned with status code HTTP 401. If the user does not have access permissions for the requested action, access requests are rejected with an authentication error HTTP 403. 
@@ -23,12 +23,12 @@
 
 ## Assurance Claim - 3: 
 **Top Claim 3: Elasticsearch defends against suspicious login activity.**
-![Suspicious login attempts](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp/Assurance-Cases/Assurance-Claim.png)
+![Suspicious login attempts](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Assurance-Claims/Assurance-Claim.png)
 * **Evidence E1:** Elasticsearch has the flexibility to add filters that can detect successful [brute-force](https://www.elastic.co/blog/integrating-elasticsearch-with-arcsight-siem-part-4) login attempts within a window size of X-minutes. Once the conditions are met [alerts](https://www.elastic.co/guide/en/watcher/current/actions.html#actions-email) actions can be configured to send emails to notify admin.
 * **Evidence E2:** To prevent unauthorized login attempts to user accounts [multi-factor authentication](https://www.elastic.co/guide/en/cloud/current/ec-account-security.html) can be enabled. This adds an additional level of security which prompts for login credential's followed by a one-time password sent to the registered mobile.  
 
 ## Assurance Claim 4:
-![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%204.png)
+![Network Eavesdropping Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Assurance-Claims/Assurance%20Claim%204.png)
 
 * **Evidence E1:** When [generating certificates](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/configuring-tls.html#node-certificates), Elasticsearch allows private keys to be encrypted with a password, and the passwords to be stored in the Elasticsearch [keystore](https://www.elastic.co/guide/en/elasticsearch/reference/current/secure-settings.html).  The keystore provides an extra layer of protection beyond simple file system permissions.
 * **Evidence E2:** To verify traffic is not being sent in plain text but rather an encrypted form, a packet capture could be conducted to verify API calls to Elasticsearch are indeed encrypted.  A simple packet capture could be done with Wireshark or another comparable tool. 
@@ -42,7 +42,7 @@
 ## Assurance Claim 5: 
 **Top Claim 5:  Elasticsearch's audit logging functions prevents tampering.**
 
-![Audit Logging Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/mabaumgartner/Assurance-Cases/Assurance%20Claim%205.png)
+![Audit Logging Claim](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Assurance-Claims/Assurance%20Claim%205.png)
 
 * **Evidence E1:** A application penetration test would be the best way to verify that the logging process cannot be forced into a denial of service condition by denying the release or closure of the log file.  This testing could provide assurance that the file would not grow too large or could not be closed for log rotation.
 * **Evidence E2:** The Elasticsearch logging process should only append to the log file and will never overwrite data in the open file.  To verify this expected operation, a code review of the audit logging module should be conducted.
