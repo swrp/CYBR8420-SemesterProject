@@ -13,34 +13,34 @@ Users must sign a contributor license agreement as an individual user or a compa
 
 From the below graph we can analyze the number of people contributing to the Elasticsearch project since 2010. These statistics are from the Elasticsearch GitHub open source repository. From the graph we can observe the increase in the number of contributions for this repository by year.
 
-![Contributions in GitHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Contributor%20GitHub.png)
+![Contributions in GitHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Contributor%20GitHub.png)
 
 The below statistics for contributors per month are based on the another Elasticsearch open source repository, [Elasticsearch open hub source page](https://www.openhub.net/p/elasticsearch).
 
-![Contributions in OpenHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/OpenHub%20Contributor.png)
+![Contributions in OpenHub](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/OpenHub%20Contributor.png)
 
 ### Activity
 Since the time it is developed, Elasticsearch has skyrocketed every year and is now currently one of the leading solutions. 
 This project has nearly 50,000 commits by around 2,000 contributors and over a 2.5 million lines of code. These statistics are analyzed from the [Elasticsearch GitHub page](https://github.com/elastic/elasticsearch). 
 The below statistics are according to the another opensource repository of Elasticsearch [Elasticsearch open hub source page](https://www.openhub.net/p/elasticsearch) 
 
-![Activity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Activity.png)
+![Activity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Activity.png)
 
-![Lines of Code](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Lines%20of%20code.png)
+![Lines of Code](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Lines%20of%20code.png)
 
 ### Popularity
 There are many organizations that are using Elasticsearch products such as eBay, Vimeo, Fermilab, Airbus, SAP Concur, Lyft, IEEE Globalspec, Citi, Fitbit and many others. We can see the increase in the popularity of Elasticsearch from year to year since the time it was developed. Since it is open source and free, the product popularity has increased worldwide. The benefits like a powerful API, flexible data storage, fast search, easy to scale, restful service, many great search engine features and many other features are keeping Elasticsearch one of the top competitors.
 
 From the below statistics, we can observe the popularity of Elasticsearch year by year and regionally.
 
-![Popularity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity.png)
+![Popularity of Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Popularity.png)
 
-![Popularity of Elasticsearch regionally](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Popularity%202.png)
+![Popularity of Elasticsearch regionally](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Popularity%202.png)
 
 ### Languages Used
 The language used to develop the Elasticsearch is Java.  There are many clients available that can connect to Elasticsearch. The official clients for Elasticsearch are Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and other many languages. 
 
-![Languages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada/Languages%20used.png)
+![Languages used in developing Elasticsearch](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/images/Languages%20used.png)
 
 ### Platform Used
 Elasticsearch requires at least Java version 1.8.0_131 or a later version in the Java 8 release series to run their project. It supports only Oracle’s Java and the OpenJDK. It is recommended to use same JVM version across all the Elasticsearch nodes and clients. They also tested running Elasticsearch successfully on the various platforms that are listed in their website. They also mentioned that it is also possible that it can work on other platforms that are not listed in their website.
