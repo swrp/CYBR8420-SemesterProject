@@ -2,12 +2,12 @@
 #### Data Flow: User Uploads Data
 Level 0 DFD
 
-![Level 0 for User Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada-TMT/Threat%20Models/Analyst%20Pushes%20Data%20Into%20Cluster-Level-0.PNG)
+![Level 0 for User Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Threat%20Models/Analyst%20Pushes%20Data%20Into%20Cluster-Level-0.PNG)
 
 #### Data Flow: System Uploads Data
 Level 0 DFD
 
-![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/maddagada-TMT/Threat%20Models/Application%20Pushes%20Data%20Into%20Cluster-Level_0.PNG)
+![Level 0 for System Uploads Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Threat%20Models/Application%20Pushes%20Data%20Into%20Cluster-Level_0.PNG)
 
 The complete threat report alongwith consolidated Level 1 diagram for system uploads data and user uploads data can be found <a href = "https://swrp.github.io/CYBR8420-SemesterProject/UpdatingDataToCluster.htm">here.</a>
 
@@ -22,7 +22,7 @@ A full threat model and Level 1 data flow diagram has been completed <a href = "
 
 Level 0 DFD
 
-![Level 0 Analyst Querying for Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/swrp-TMT/Threat%20Models/AnalystQueriesForFraudReports.png)
+![Level 0 Analyst Querying for Data](https://github.com/swrp/CYBR8420-SemesterProject/blob/master/Threat%20Models/AnalystQueriesForFraudReports.png)
 
 A full threat model and Level 1 data flow diagram has been completed <a href = "https://swrp.github.io/CYBR8420-SemesterProject/AnalystQueriesForFraudReprts.htm">here.</a>
 
